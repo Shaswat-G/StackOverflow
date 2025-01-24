@@ -1,0 +1,197 @@
+{
+    "_id": 3144295,
+    "answer_count": 1,
+    "answers": [
+        {
+            "owner": {
+                "account_id": 54985,
+                "reputation": 16085,
+                "user_id": 164602,
+                "user_type": "registered",
+                "accept_rate": 92,
+                "profile_image": "https://www.gravatar.com/avatar/120bfc3ff5ce133373ab9f5c0780a6d5?s=256&d=identicon&r=PG",
+                "display_name": "David Underhill",
+                "link": "https://stackoverflow.com/users/164602/david-underhill"
+            },
+            "is_accepted": false,
+            "score": 4,
+            "last_activity_date": 1277841926,
+            "creation_date": 1277841926,
+            "answer_id": 3144306,
+            "question_id": 3144295,
+            "content_license": "CC BY-SA 2.5"
+        }
+    ],
+    "body": "<p>I am using the low level datastore interface in java. I have an entity that stores a collection of Keys. I would like to query the datastore to get all of the entities in the collection. However, I'd also like to sort them on a created date property. So, I'd like to do something like this:</p>\n\n<pre><code>Query query = new Query(EndeavorUpdate.ENDEAVOR_UPDATE_ENTITY_TYPE);\n//getEndeavorUpdateIds() returns a List &lt; Key &gt;\nquery.addFilter(\"__key__\", Query.FilterOperator.EQUAL, getEndeavorUpdateIds());\nquery.addSort(EndeavorUpdate.CREATED_DATE_PROPERTY);\nPreparedQuery pq = ds.prepare(query);\n</code></pre>\n\n<p>However, I get an exception saying that \"a collection of values is not allowed\". It does work if I use IN instead of EQUAL but that seems tremendously inefficient. </p>\n\n<p>Is there a way to do this query efficiently or should I get all the entities from the datastore and do the sorting myself?</p>\n",
+    "body_markdown": "I am using the low level datastore interface in java. I have an entity that stores a collection of Keys. I would like to query the datastore to get all of the entities in the collection. However, I&#39;d also like to sort them on a created date property. So, I&#39;d like to do something like this:\r\n\r\n    Query query = new Query(EndeavorUpdate.ENDEAVOR_UPDATE_ENTITY_TYPE);\r\n    //getEndeavorUpdateIds() returns a List &lt; Key &gt;\r\n    query.addFilter(&quot;__key__&quot;, Query.FilterOperator.EQUAL, getEndeavorUpdateIds());\r\n    query.addSort(EndeavorUpdate.CREATED_DATE_PROPERTY);\r\n    PreparedQuery pq = ds.prepare(query);\r\n\r\nHowever, I get an exception saying that &quot;a collection of values is not allowed&quot;. It does work if I use IN instead of EQUAL but that seems tremendously inefficient. \r\n\r\nIs there a way to do this query efficiently or should I get all the entities from the datastore and do the sorting myself?",
+    "collected": {
+        "$date": "2024-05-23T08:46:42.611Z"
+    },
+    "comment_count": 0,
+    "creation_date": 1277841835,
+    "delete_vote_count": 0,
+    "down_vote_count": 0,
+    "favorite_count": 0,
+    "last_activity_date": 1279747757,
+    "last_edit_date": 1279747757,
+    "link": "https://stackoverflow.com/questions/3144295/querying-google-datastore-by-key-and-sorting-by-another-property",
+    "owner": {
+        "account_id": 66690,
+        "reputation": 2047,
+        "user_id": 195539,
+        "user_type": "registered",
+        "accept_rate": 38,
+        "profile_image": "https://i.sstatic.net/TAsXe.jpg?s=256",
+        "display_name": "Mark M",
+        "link": "https://stackoverflow.com/users/195539/mark-m"
+    },
+    "question_id": 3144295,
+    "reopen_vote_count": 0,
+    "score": 4,
+    "share_link": "https://stackoverflow.com/q/3144295",
+    "tags": [
+        "java",
+        "google-app-engine",
+        "google-cloud-datastore"
+    ],
+    "title": "Querying google datastore by key and sorting by another property",
+    "up_vote_count": 4,
+    "view_count": 1252,
+    "matched_answers": [
+        {
+            "_id": 3144306,
+            "body": "<p>Since you have the keys, it would be most efficient to just get all of the entities directly by key and then sort them by date yourself.</p>\n\n<p>Doing the sorting yourself may also save you from needing an index on the <code>EndeavorUpdate</code> model's date created field (depending on whether you also need such an index somewhere else in your code or not).</p>\n",
+            "body_markdown": "Since you have the keys, it would be most efficient to just get all of the entities directly by key and then sort them by date yourself.\r\n\r\nDoing the sorting yourself may also save you from needing an index on the `EndeavorUpdate` model&#39;s date created field (depending on whether you also need such an index somewhere else in your code or not).",
+            "comment_count": 0,
+            "content_license": "CC BY-SA 2.5",
+            "creation_date": 1277841926,
+            "down_vote_count": 0,
+            "is_accepted": false,
+            "last_activity_date": 1277841926,
+            "last_edit_date": null,
+            "link": "https://stackoverflow.com/questions/3144295/querying-google-datastore-by-key-and-sorting-by-another-property/3144306#3144306",
+            "owner": {
+                "account_id": 54985,
+                "reputation": 16145,
+                "user_id": 164602,
+                "user_type": "registered",
+                "profile_image": "https://www.gravatar.com/avatar/120bfc3ff5ce133373ab9f5c0780a6d5?s=256&d=identicon&r=PG",
+                "display_name": "David Underhill",
+                "link": "https://stackoverflow.com/users/164602/david-underhill",
+                "accept_rate": 92
+            },
+            "question_id": 3144295,
+            "score": 4,
+            "scraped": {
+                "$date": "2024-07-11T16:19:07.113Z"
+            },
+            "title": "Querying google datastore by key and sorting by another property",
+            "up_vote_count": 4
+        }
+    ],
+    "edits": [
+        {
+            "_id": {
+                "$oid": "672c85d693a360ee27e536eb"
+            },
+            "Id": "6511722",
+            "PostId": "3144295",
+            "ParentId": "",
+            "PostHistoryTypeId": "2",
+            "PostTypeId": "",
+            "CreationDate": "2010-06-29T20:03:55.083",
+            "OwnerUserId": "",
+            "Score": 0,
+            "Body": "I am using the low level datastore interface in java. I have an entity that stores a collection of Keys. I would like to query the datastore to get all of the entities in the collection. However, I'd also like to sort them on a created date property. So, I'd like to do something like this:\r\n\r\n    Query query = new Query(EndeavorUpdate.ENDEAVOR_UPDATE_ENTITY_TYPE);\r\n    //getEndeavorUpdateIds() returns a List < Key >\r\n    query.addFilter(\"__key__\", Query.FilterOperator.EQUAL, getEndeavorUpdateIds());\r\n    query.addSort(EndeavorUpdate.CREATED_DATE_PROPERTY);\r\n    PreparedQuery pq = ds.prepare(query);\r\n\r\nHowever, I get an exception saying that \"a collection of values is not allowed\". It does work if I use IN instead of EQUAL but that seems tremendously inefficient. \r\n\r\nIs there a way to do this query efficiently or should I get all the entities from the datastore and do the sorting myself?",
+            "LastEditorUserId": "",
+            "LastEditorDisplayName": "",
+            "LastEditDate": "",
+            "LastActivityDate": "",
+            "CommentCount": 0,
+            "ContentLicense": "CC BY-SA 2.5",
+            "RevisionGUID": "67910504-e66a-4a0e-9c54-e13478d8448e",
+            "UserId": "195539",
+            "UserDisplayName": "",
+            "CloseReasonId": "",
+            "Text": "I am using the low level datastore interface in java. I have an entity that stores a collection of Keys. I would like to query the datastore to get all of the entities in the collection. However, I'd also like to sort them on a created date property. So, I'd like to do something like this:\r\n\r\n    Query query = new Query(EndeavorUpdate.ENDEAVOR_UPDATE_ENTITY_TYPE);\r\n    //getEndeavorUpdateIds() returns a List < Key >\r\n    query.addFilter(\"__key__\", Query.FilterOperator.EQUAL, getEndeavorUpdateIds());\r\n    query.addSort(EndeavorUpdate.CREATED_DATE_PROPERTY);\r\n    PreparedQuery pq = ds.prepare(query);\r\n\r\nHowever, I get an exception saying that \"a collection of values is not allowed\". It does work if I use IN instead of EQUAL but that seems tremendously inefficient. \r\n\r\nIs there a way to do this query efficiently or should I get all the entities from the datastore and do the sorting myself?"
+        },
+        {
+            "_id": {
+                "$oid": "672c85d693a360ee27e536ec"
+            },
+            "Id": "6511723",
+            "PostId": "3144295",
+            "ParentId": "",
+            "PostHistoryTypeId": "1",
+            "PostTypeId": "",
+            "CreationDate": "2010-06-29T20:03:55.083",
+            "OwnerUserId": "",
+            "Score": 0,
+            "Body": "Querying google datastore by key and sorting by another property",
+            "LastEditorUserId": "",
+            "LastEditorDisplayName": "",
+            "LastEditDate": "",
+            "LastActivityDate": "",
+            "CommentCount": 0,
+            "ContentLicense": "CC BY-SA 2.5",
+            "RevisionGUID": "67910504-e66a-4a0e-9c54-e13478d8448e",
+            "UserId": "195539",
+            "UserDisplayName": "",
+            "CloseReasonId": "",
+            "Text": "Querying google datastore by key and sorting by another property"
+        },
+        {
+            "_id": {
+                "$oid": "672c85d693a360ee27e536ed"
+            },
+            "Id": "6511724",
+            "PostId": "3144295",
+            "ParentId": "",
+            "PostHistoryTypeId": "3",
+            "PostTypeId": "",
+            "CreationDate": "2010-06-29T20:03:55.083",
+            "OwnerUserId": "",
+            "Score": 0,
+            "Body": "<java><google-app-engine><google-datastore>",
+            "LastEditorUserId": "",
+            "LastEditorDisplayName": "",
+            "LastEditDate": "",
+            "LastActivityDate": "",
+            "CommentCount": 0,
+            "ContentLicense": "CC BY-SA 2.5",
+            "RevisionGUID": "67910504-e66a-4a0e-9c54-e13478d8448e",
+            "UserId": "195539",
+            "UserDisplayName": "",
+            "CloseReasonId": "",
+            "Text": "<java><google-app-engine><google-datastore>"
+        },
+        {
+            "_id": {
+                "$oid": "672c85da93a360ee27e53bc2"
+            },
+            "Id": "6863164",
+            "PostId": "3144295",
+            "ParentId": "",
+            "PostHistoryTypeId": "6",
+            "PostTypeId": "",
+            "CreationDate": "2010-07-21T21:29:17.687",
+            "OwnerUserId": "",
+            "Score": 0,
+            "Body": "<java><google-app-engine><google-cloud-datastore>",
+            "LastEditorUserId": "",
+            "LastEditorDisplayName": "",
+            "LastEditDate": "",
+            "LastActivityDate": "",
+            "CommentCount": 0,
+            "ContentLicense": "CC BY-SA 2.5",
+            "RevisionGUID": "dbde46ad-924c-4401-bfe0-34adf07eea51",
+            "UserId": "164602",
+            "UserDisplayName": "",
+            "CloseReasonId": "",
+            "Text": "<java><google-app-engine><google-cloud-datastore>"
+        }
+    ],
+    "creation_date_formatted": "29.06.2010",
+    "last_activity_date_formatted": "21.07.2010",
+    "last_edit_date_formatted": "21.07.2010"
+}
