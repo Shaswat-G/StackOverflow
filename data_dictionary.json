@@ -1,0 +1,252 @@
+{
+    "fields": [
+        {
+            "field_name": "_id",
+            "type": "int",
+            "description": "Unique identifier for the question (same as question_id)."
+        },
+        {
+            "field_name": "question_id",
+            "type": "int",
+            "description": "Unique identifier for the question."
+        },
+        {
+            "field_name": "title",
+            "type": "string",
+            "description": "The title of the question."
+        },
+        {
+            "field_name": "body",
+            "type": "string (HTML)",
+            "description": "Full question description in HTML format."
+        },
+        {
+            "field_name": "body_markdown",
+            "type": "string (Markdown)",
+            "description": "Full question description in Markdown format."
+        },
+        {
+            "field_name": "tags",
+            "type": "list[string]",
+            "description": "List of tags categorizing the question."
+        },
+        {
+            "field_name": "owner",
+            "type": "dict",
+            "description": "Metadata about the user who asked the question (see owner_subfields)."
+        },
+        {
+            "field_name": "creation_date",
+            "type": "int (timestamp)",
+            "description": "Creation date of the question in Unix timestamp format."
+        },
+        {
+            "field_name": "last_activity_date",
+            "type": "int (timestamp)",
+            "description": "Timestamp of the last activity (e.g., edit, comment)."
+        },
+        {
+            "field_name": "last_edit_date",
+            "type": "int (timestamp)",
+            "description": "Timestamp of the last edit made to the question."
+        },
+        {
+            "field_name": "view_count",
+            "type": "int",
+            "description": "Number of times the question was viewed."
+        },
+        {
+            "field_name": "score",
+            "type": "int",
+            "description": "Total upvotes minus downvotes for the question."
+        },
+        {
+            "field_name": "up_vote_count",
+            "type": "int",
+            "description": "Number of upvotes for the question."
+        },
+        {
+            "field_name": "down_vote_count",
+            "type": "int",
+            "description": "Number of downvotes for the question."
+        },
+        {
+            "field_name": "favorite_count",
+            "type": "int",
+            "description": "Number of users who marked the question as a favorite."
+        },
+        {
+            "field_name": "delete_vote_count",
+            "type": "int",
+            "description": "Number of delete votes cast for the question."
+        },
+        {
+            "field_name": "reopen_vote_count",
+            "type": "int",
+            "description": "Number of reopen votes cast for the question."
+        },
+        {
+            "field_name": "link",
+            "type": "string",
+            "description": "Full URL to the question."
+        },
+        {
+            "field_name": "share_link",
+            "type": "string",
+            "description": "Shortened shareable link for the question."
+        },
+        {
+            "field_name": "answer_count",
+            "type": "int",
+            "description": "Total number of answers posted for the question."
+        },
+        {
+            "field_name": "answers",
+            "type": "list[dict]",
+            "description": "List of answers for the question (see answer_subfields)."
+        },
+        {
+            "field_name": "matched_answers",
+            "type": "list[dict]",
+            "description": "Answers matched by a specific algorithm/query (similar to answers)."
+        },
+        {
+            "field_name": "collected",
+            "type": "datetime",
+            "description": "Timestamp indicating when this document was scraped/collected."
+        },
+        {
+            "field_name": "edits",
+            "type": "list[dict]",
+            "description": "List of revisions made to the question (see edits_subfields)."
+        }
+    ],
+    "subfields": {
+        "owner_subfields": [
+            {
+                "field_name": "account_id",
+                "type": "int",
+                "description": "Unique identifier for the user\u2019s account."
+            },
+            {
+                "field_name": "user_id",
+                "type": "int",
+                "description": "Unique identifier for the user."
+            },
+            {
+                "field_name": "user_type",
+                "type": "string",
+                "description": "Type of user account (e.g., registered)."
+            },
+            {
+                "field_name": "reputation",
+                "type": "int",
+                "description": "Total reputation points for the user."
+            },
+            {
+                "field_name": "accept_rate",
+                "type": "int",
+                "description": "Percentage of accepted answers (if applicable)."
+            },
+            {
+                "field_name": "profile_image",
+                "type": "string (URL)",
+                "description": "URL to the user's profile image."
+            },
+            {
+                "field_name": "display_name",
+                "type": "string",
+                "description": "Display name of the user."
+            },
+            {
+                "field_name": "link",
+                "type": "string (URL)",
+                "description": "Link to the user\u2019s Stack Overflow profile."
+            }
+        ],
+        "answer_subfields": [
+            {
+                "field_name": "answer_id",
+                "type": "int",
+                "description": "Unique identifier for the answer."
+            },
+            {
+                "field_name": "question_id",
+                "type": "int",
+                "description": "Identifier of the associated question."
+            },
+            {
+                "field_name": "body",
+                "type": "string (HTML)",
+                "description": "Full answer content in HTML format."
+            },
+            {
+                "field_name": "body_markdown",
+                "type": "string (Markdown)",
+                "description": "Full answer content in Markdown format."
+            },
+            {
+                "field_name": "is_accepted",
+                "type": "bool",
+                "description": "Indicates if the answer is marked as accepted."
+            },
+            {
+                "field_name": "score",
+                "type": "int",
+                "description": "Total upvotes minus downvotes for the answer."
+            },
+            {
+                "field_name": "creation_date",
+                "type": "int (timestamp)",
+                "description": "Timestamp when the answer was created."
+            },
+            {
+                "field_name": "last_activity_date",
+                "type": "int (timestamp)",
+                "description": "Timestamp of the last activity for the answer."
+            },
+            {
+                "field_name": "last_edit_date",
+                "type": "int (timestamp)",
+                "description": "Timestamp of the last edit for the answer."
+            },
+            {
+                "field_name": "link",
+                "type": "string",
+                "description": "URL to the answer."
+            }
+        ],
+        "edits_subfields": [
+            {
+                "field_name": "_id",
+                "type": "ObjectId",
+                "description": "Unique identifier for the edit."
+            },
+            {
+                "field_name": "PostId",
+                "type": "string",
+                "description": "ID of the post being edited."
+            },
+            {
+                "field_name": "PostHistoryTypeId",
+                "type": "string",
+                "description": "Type of edit made (e.g., title change, body edit)."
+            },
+            {
+                "field_name": "Text",
+                "type": "string",
+                "description": "Content that was added/modified during the edit."
+            },
+            {
+                "field_name": "CreationDate",
+                "type": "string (datetime)",
+                "description": "Timestamp when the edit was made."
+            },
+            {
+                "field_name": "UserId",
+                "type": "int",
+                "description": "ID of the user who made the edit."
+            }
+        ]
+    }
+}
