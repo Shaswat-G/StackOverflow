@@ -1,0 +1,5 @@
+{
+  "uri": "mongodb+srv://mzamponi:iM97jgMYeYgUQMVi@cluster0.q761myr.mongodb.net/?tls=true",
+  "database_name": "stack_overflow",
+  "collection_name": "google_match_datadump"
+}
