@@ -1,6 +1,6 @@
-from mongo_connection import MongoDBConnection
-from answer_extractor import AnswerExtractor
-from answer_metrics import AnswerMetrics
+from .mongo_connection import MongoDBConnection
+from .answer_extractor import AnswerExtractor
+from .answer_metrics import AnswerMetrics
 
 class AnswerAnalyzer:
     
