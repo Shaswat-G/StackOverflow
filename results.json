@@ -1,0 +1,416 @@
+[
+  {
+    "question_id": 3144295,
+    "time_metrics": {
+      "total_answers": 1,
+      "min_delay": 0.025277777777777777,
+      "max_delay": 0.025277777777777777,
+      "mean_delay": 0.025277777777777777,
+      "median_delay": 0.025277777777777777,
+      "std_delay": 0.0,
+      "q1": 0.025277777777777777,
+      "q3": 0.025277777777777777,
+      "skewness": "Undefined",
+      "kurtosis": "Undefined",
+      "answer_rate": 39.56043956043956
+    },
+    "per_answer_metrics": [
+      {
+        "answer_id": 3144306,
+        "complexity": {
+          "word_count": 63,
+          "contains_code": true,
+          "average_word_length": 4.317460317460317
+        },
+        "engagement": {
+          "engagement_score": 4.0,
+          "is_accepted": false,
+          "score": 4
+        }
+      }
+    ]
+  },
+  {
+    "question_id": 3143969,
+    "time_metrics": {
+      "total_answers": 1,
+      "min_delay": 0.3705555555555556,
+      "max_delay": 0.3705555555555556,
+      "mean_delay": 0.3705555555555556,
+      "median_delay": 0.3705555555555556,
+      "std_delay": 0.0,
+      "q1": 0.3705555555555556,
+      "q3": 0.3705555555555556,
+      "skewness": "Undefined",
+      "kurtosis": "Undefined",
+      "answer_rate": 2.6986506746626686
+    },
+    "per_answer_metrics": [
+      {
+        "answer_id": 3144116,
+        "complexity": {
+          "word_count": 27,
+          "contains_code": false,
+          "average_word_length": 4.592592592592593
+        },
+        "engagement": {
+          "engagement_score": 1.7000000000000002,
+          "is_accepted": true,
+          "score": 1
+        }
+      }
+    ]
+  },
+  {
+    "question_id": 3143703,
+    "time_metrics": {
+      "total_answers": 2,
+      "min_delay": 0.09888888888888889,
+      "max_delay": 0.15888888888888889,
+      "mean_delay": 0.1288888888888889,
+      "median_delay": 0.1288888888888889,
+      "std_delay": 0.03,
+      "q1": 0.11388888888888889,
+      "q3": 0.1438888888888889,
+      "skewness": 0.0,
+      "kurtosis": -2.0,
+      "answer_rate": 12.587412587412588
+    },
+    "per_answer_metrics": [
+      {
+        "answer_id": 3143763,
+        "complexity": {
+          "word_count": 103,
+          "contains_code": false,
+          "average_word_length": 4.135922330097087
+        },
+        "engagement": {
+          "engagement_score": 0.4,
+          "is_accepted": true,
+          "score": 0
+        }
+      },
+      {
+        "answer_id": 3143745,
+        "complexity": {
+          "word_count": 75,
+          "contains_code": false,
+          "average_word_length": 4.826666666666667
+        },
+        "engagement": {
+          "engagement_score": 0.0,
+          "is_accepted": false,
+          "score": 0
+        }
+      }
+    ]
+  },
+  {
+    "question_id": 3143337,
+    "time_metrics": {
+      "total_answers": 2,
+      "min_delay": 0.3125,
+      "max_delay": 1.763611111111111,
+      "mean_delay": 1.0380555555555555,
+      "median_delay": 1.0380555555555555,
+      "std_delay": 0.7255555555555555,
+      "q1": 0.6752777777777778,
+      "q3": 1.4008333333333334,
+      "skewness": 0.0,
+      "kurtosis": -2.0,
+      "answer_rate": 1.1340368561978265
+    },
+    "per_answer_metrics": [
+      {
+        "answer_id": 3143474,
+        "complexity": {
+          "word_count": 120,
+          "contains_code": true,
+          "average_word_length": 4.141666666666667
+        },
+        "engagement": {
+          "engagement_score": 2.0,
+          "is_accepted": false,
+          "score": 2
+        }
+      },
+      {
+        "answer_id": 3144064,
+        "complexity": {
+          "word_count": 9,
+          "contains_code": false,
+          "average_word_length": 4.0
+        },
+        "engagement": {
+          "engagement_score": 4.0,
+          "is_accepted": true,
+          "score": 4
+        }
+      }
+    ]
+  },
+  {
+    "question_id": 3140774,
+    "time_metrics": {
+      "total_answers": 1,
+      "min_delay": 24.96638888888889,
+      "max_delay": 24.96638888888889,
+      "mean_delay": 24.96638888888889,
+      "median_delay": 24.96638888888889,
+      "std_delay": 0.0,
+      "q1": 24.96638888888889,
+      "q3": 24.96638888888889,
+      "skewness": "Undefined",
+      "kurtosis": "Undefined",
+      "answer_rate": 0.0400538501763482
+    },
+    "per_answer_metrics": [
+      {
+        "answer_id": 3149883,
+        "complexity": {
+          "word_count": 76,
+          "contains_code": true,
+          "average_word_length": 4.578947368421052
+        },
+        "engagement": {
+          "engagement_score": 1.0,
+          "is_accepted": false,
+          "score": 1
+        }
+      }
+    ]
+  },
+  {
+    "question_id": 3139527,
+    "time_metrics": {
+      "total_answers": 3,
+      "min_delay": 2980.718611111111,
+      "max_delay": 22533.553055555556,
+      "mean_delay": 13785.992499999998,
+      "median_delay": 15843.705833333333,
+      "std_delay": 8113.937466877455,
+      "q1": 9412.212222222222,
+      "q3": 19188.629444444443,
+      "skewness": -0.36409326046995955,
+      "kurtosis": -1.5000000000000004,
+      "answer_rate": 0.0001331347964789939
+    },
+    "per_answer_metrics": [
+      {
+        "answer_id": 14474399,
+        "complexity": {
+          "word_count": 74,
+          "contains_code": false,
+          "average_word_length": 4.527027027027027
+        },
+        "engagement": {
+          "engagement_score": 0.1,
+          "is_accepted": true,
+          "score": 0
+        }
+      },
+      {
+        "answer_id": 10229177,
+        "complexity": {
+          "word_count": 109,
+          "contains_code": false,
+          "average_word_length": 4.623853211009174
+        },
+        "engagement": {
+          "engagement_score": 1.0,
+          "is_accepted": false,
+          "score": 1
+        }
+      },
+      {
+        "answer_id": 4063493,
+        "complexity": {
+          "word_count": 97,
+          "contains_code": false,
+          "average_word_length": 4.597938144329897
+        },
+        "engagement": {
+          "engagement_score": 1.0,
+          "is_accepted": false,
+          "score": 1
+        }
+      }
+    ]
+  },
+  {
+    "question_id": 3139195,
+    "time_metrics": {
+      "total_answers": 2,
+      "min_delay": 1.0641666666666667,
+      "max_delay": 23134.94027777778,
+      "mean_delay": 11568.002222222223,
+      "median_delay": 11568.002222222223,
+      "std_delay": 11566.938055555556,
+      "q1": 5784.533194444445,
+      "q3": 17351.471250000002,
+      "skewness": 0.0,
+      "kurtosis": -2.0,
+      "answer_rate": 8.644932625657547e-05
+    },
+    "per_answer_metrics": [
+      {
+        "answer_id": 14919091,
+        "complexity": {
+          "word_count": 19,
+          "contains_code": true,
+          "average_word_length": 6.526315789473684
+        },
+        "engagement": {
+          "engagement_score": 1.0,
+          "is_accepted": false,
+          "score": 1
+        }
+      },
+      {
+        "answer_id": 3139631,
+        "complexity": {
+          "word_count": 56,
+          "contains_code": true,
+          "average_word_length": 4.25
+        },
+        "engagement": {
+          "engagement_score": 4.0,
+          "is_accepted": true,
+          "score": 4
+        }
+      }
+    ]
+  },
+  {
+    "question_id": 3137714,
+    "time_metrics": {
+      "total_answers": 1,
+      "min_delay": 107.31305555555555,
+      "max_delay": 107.31305555555555,
+      "mean_delay": 107.31305555555555,
+      "median_delay": 107.31305555555555,
+      "std_delay": 0.0,
+      "q1": 107.31305555555555,
+      "q3": 107.31305555555555,
+      "skewness": "Undefined",
+      "kurtosis": "Undefined",
+      "answer_rate": 0.009318530674791046
+    },
+    "per_answer_metrics": [
+      {
+        "answer_id": 3171882,
+        "complexity": {
+          "word_count": 58,
+          "contains_code": false,
+          "average_word_length": 4.517241379310345
+        },
+        "engagement": {
+          "engagement_score": 0.0,
+          "is_accepted": true,
+          "score": 0
+        }
+      }
+    ]
+  },
+  {
+    "question_id": 3137070,
+    "time_metrics": {
+      "total_answers": 2,
+      "min_delay": 0.17666666666666667,
+      "max_delay": 3.692222222222222,
+      "mean_delay": 1.9344444444444444,
+      "median_delay": 1.9344444444444444,
+      "std_delay": 1.7577777777777777,
+      "q1": 1.0555555555555556,
+      "q3": 2.8133333333333335,
+      "skewness": 0.0,
+      "kurtosis": -2.0,
+      "answer_rate": 0.5416792055371652
+    },
+    "per_answer_metrics": [
+      {
+        "answer_id": 3137780,
+        "complexity": {
+          "word_count": 189,
+          "contains_code": false,
+          "average_word_length": 4.291005291005291
+        },
+        "engagement": {
+          "engagement_score": 2.5,
+          "is_accepted": false,
+          "score": 2
+        }
+      },
+      {
+        "answer_id": 3137106,
+        "complexity": {
+          "word_count": 69,
+          "contains_code": false,
+          "average_word_length": 4.608695652173913
+        },
+        "engagement": {
+          "engagement_score": 2.1,
+          "is_accepted": false,
+          "score": 2
+        }
+      }
+    ]
+  },
+  {
+    "question_id": 3153845,
+    "time_metrics": {
+      "total_answers": 3,
+      "min_delay": 1.01,
+      "max_delay": 6376.134444444445,
+      "mean_delay": 2129.230462962963,
+      "median_delay": 10.546944444444444,
+      "std_delay": 3003.0171282972265,
+      "q1": 5.778472222222222,
+      "q3": 3193.3406944444446,
+      "skewness": 0.7071014324790524,
+      "kurtosis": -1.4999999999999998,
+      "answer_rate": 0.00047050450804310027
+    },
+    "per_answer_metrics": [
+      {
+        "answer_id": 5406768,
+        "complexity": {
+          "word_count": 32,
+          "contains_code": true,
+          "average_word_length": 4.71875
+        },
+        "engagement": {
+          "engagement_score": 1.0,
+          "is_accepted": false,
+          "score": 1
+        }
+      },
+      {
+        "answer_id": 3156281,
+        "complexity": {
+          "word_count": 66,
+          "contains_code": true,
+          "average_word_length": 4.454545454545454
+        },
+        "engagement": {
+          "engagement_score": 2.6,
+          "is_accepted": true,
+          "score": 2
+        }
+      },
+      {
+        "answer_id": 3154124,
+        "complexity": {
+          "word_count": 50,
+          "contains_code": false,
+          "average_word_length": 4.14
+        },
+        "engagement": {
+          "engagement_score": 2.1,
+          "is_accepted": false,
+          "score": 2
+        }
+      }
+    ]
+  }
+]

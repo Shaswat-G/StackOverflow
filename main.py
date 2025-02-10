@@ -1,19 +1,23 @@
 import json
 from answer_analysis import AnswerAnalyzer
 
-def main():
-    with open("answer_analysis/db_config.json", "r") as config_file:
-        db_config = json.load(config_file)
+def read_config(config_path: str) -> dict:
+    print(f"Reading configuration from {config_path} ...")
+    with open(config_path, "r") as config_file:
+        config = json.load(config_file)
+    print("Configuration loaded.")
+    return config
 
-    analyzer = AnswerAnalyzer(db_config, db_config["collection_name"])
+def main():
+    print("Starting main process...")
+    config_path = "answer_analysis/db_config.json"
+    db_config = read_config(config_path)
     
-    try:
-        results = analyzer.analyze(limit=10)  # Analyze 10 answers
-        print("Analysis Results:")
-        for i, result in enumerate(results, start=1):
-            print(f"Answer {i}: {result}")
-    finally:
-        analyzer.close_connection()
+    analyzer = AnswerAnalyzer(db_config, db_config["collection_name"], limit=10, results_path="results.json")
+    analyzer.analyze()
+    analyzer.save_results()
+    analyzer.close_connection()
+    print("Process completed.")
 
 if __name__ == "__main__":
     main()

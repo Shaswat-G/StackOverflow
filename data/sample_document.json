@@ -1,197 +1,320 @@
 {
-    "_id": 3144295,
-    "answer_count": 1,
+    "_id": 27420176,
+    "accepted_answer_id": 27420267,
+    "answer_count": 4,
     "answers": [
         {
             "owner": {
-                "account_id": 54985,
-                "reputation": 16085,
-                "user_id": 164602,
+                "account_id": 976178,
+                "reputation": 3295,
+                "user_id": 997293,
                 "user_type": "registered",
-                "accept_rate": 92,
-                "profile_image": "https://www.gravatar.com/avatar/120bfc3ff5ce133373ab9f5c0780a6d5?s=256&d=identicon&r=PG",
-                "display_name": "David Underhill",
-                "link": "https://stackoverflow.com/users/164602/david-underhill"
+                "accept_rate": 59,
+                "profile_image": "https://www.gravatar.com/avatar/bf8cc30d3f6efdd5615f897030cb713e?s=256&d=identicon&r=PG",
+                "display_name": "James Andrews",
+                "link": "https://stackoverflow.com/users/997293/james-andrews"
+            },
+            "is_accepted": true,
+            "score": -1,
+            "last_activity_date": 1418316538,
+            "last_edit_date": 1418316538,
+            "creation_date": 1418292855,
+            "answer_id": 27420267,
+            "question_id": 27420176,
+            "content_license": "CC BY-SA 3.0"
+        },
+        {
+            "owner": {
+                "account_id": 1665254,
+                "reputation": 766,
+                "user_id": 1532791,
+                "user_type": "registered",
+                "accept_rate": 62,
+                "profile_image": "https://www.gravatar.com/avatar/9cf4b754e791722a66d099e1543428b7?s=256&d=identicon&r=PG&f=y&so-version=2",
+                "display_name": "Dewey",
+                "link": "https://stackoverflow.com/users/1532791/dewey"
             },
             "is_accepted": false,
-            "score": 4,
-            "last_activity_date": 1277841926,
-            "creation_date": 1277841926,
-            "answer_id": 3144306,
-            "question_id": 3144295,
-            "content_license": "CC BY-SA 2.5"
+            "score": 2,
+            "last_activity_date": 1480043294,
+            "last_edit_date": 1480043294,
+            "creation_date": 1480042948,
+            "answer_id": 40797099,
+            "question_id": 27420176,
+            "content_license": "CC BY-SA 3.0"
+        },
+        {
+            "owner": {
+                "account_id": 7297871,
+                "reputation": 3410,
+                "user_id": 5561910,
+                "user_type": "registered",
+                "accept_rate": 75,
+                "profile_image": "https://www.gravatar.com/avatar/23ba7430a53336b3d04d3679b8038033?s=256&d=identicon&r=PG&f=y&so-version=2",
+                "display_name": "Maor",
+                "link": "https://stackoverflow.com/users/5561910/maor"
+            },
+            "is_accepted": false,
+            "score": 6,
+            "last_activity_date": 1515254438,
+            "creation_date": 1515254438,
+            "answer_id": 48129129,
+            "question_id": 27420176,
+            "content_license": "CC BY-SA 3.0"
+        },
+        {
+            "owner": {
+                "account_id": 5139535,
+                "reputation": 98,
+                "user_id": 4117348,
+                "user_type": "registered",
+                "profile_image": "https://lh5.googleusercontent.com/-LYdNYfr3zGk/AAAAAAAAAAI/AAAAAAAAACw/HfpA0OYub-4/photo.jpg?sz=256",
+                "display_name": "Albertino J&#250;nior",
+                "link": "https://stackoverflow.com/users/4117348/albertino-j%c3%banior"
+            },
+            "is_accepted": false,
+            "score": 3,
+            "last_activity_date": 1601510609,
+            "creation_date": 1601510609,
+            "answer_id": 64147367,
+            "question_id": 27420176,
+            "content_license": "CC BY-SA 4.0"
         }
     ],
-    "body": "<p>I am using the low level datastore interface in java. I have an entity that stores a collection of Keys. I would like to query the datastore to get all of the entities in the collection. However, I'd also like to sort them on a created date property. So, I'd like to do something like this:</p>\n\n<pre><code>Query query = new Query(EndeavorUpdate.ENDEAVOR_UPDATE_ENTITY_TYPE);\n//getEndeavorUpdateIds() returns a List &lt; Key &gt;\nquery.addFilter(\"__key__\", Query.FilterOperator.EQUAL, getEndeavorUpdateIds());\nquery.addSort(EndeavorUpdate.CREATED_DATE_PROPERTY);\nPreparedQuery pq = ds.prepare(query);\n</code></pre>\n\n<p>However, I get an exception saying that \"a collection of values is not allowed\". It does work if I use IN instead of EQUAL but that seems tremendously inefficient. </p>\n\n<p>Is there a way to do this query efficiently or should I get all the entities from the datastore and do the sorting myself?</p>\n",
-    "body_markdown": "I am using the low level datastore interface in java. I have an entity that stores a collection of Keys. I would like to query the datastore to get all of the entities in the collection. However, I&#39;d also like to sort them on a created date property. So, I&#39;d like to do something like this:\r\n\r\n    Query query = new Query(EndeavorUpdate.ENDEAVOR_UPDATE_ENTITY_TYPE);\r\n    //getEndeavorUpdateIds() returns a List &lt; Key &gt;\r\n    query.addFilter(&quot;__key__&quot;, Query.FilterOperator.EQUAL, getEndeavorUpdateIds());\r\n    query.addSort(EndeavorUpdate.CREATED_DATE_PROPERTY);\r\n    PreparedQuery pq = ds.prepare(query);\r\n\r\nHowever, I get an exception saying that &quot;a collection of values is not allowed&quot;. It does work if I use IN instead of EQUAL but that seems tremendously inefficient. \r\n\r\nIs there a way to do this query efficiently or should I get all the entities from the datastore and do the sorting myself?",
+    "body": "<p>What I need is a complete list of FirebaseAuthentication codes for all the different login errors and also a list of all those errors. So far I have found some by trial and error but can't take the risk I have missed some.</p>\n\n<p>I am using the Firebase simple login to log in with email/password, facebook, twitter and also anonymous logins. Obviously with this many login methods there are lots of ways the user can fail to login correctly (incorrect email format, didn't enter a password etc). Currently I am using this code:</p>\n\n<pre><code>... authenticateWithDictionary method\n\ncompletion:^(NSError * error, id&lt;PUser&gt; user) {\n\n    if (!error) {\n\n        [self loginButtonPressed:Nil];\n    }\n    else {\n\n        [UIView alertWithTitle:bErrorTitle withError:error];\n    }\n</code></pre>\n\n<p>The only issue with this is I end my getting errors raised which read like this:</p>\n\n<pre><code>**(Error Code: EMAIL_TAKEN) The specified email address is already in use.**\n</code></pre>\n\n<p>This is fine to let me know what has gone wrong in testing but once the app goes live I will want individual messages to \na) look tidier\nb) let the user know why they have got this error</p>\n\n<p>So far through trial and error I have figured out the following: </p>\n\n<p>error code</p>\n\n<pre><code>-5      INVALID EMAIL - empty or incorrect format\n-6      INVALID PASSWORD\n-9      EMAIL TAKEN\n</code></pre>\n\n<p>Once I have a complete list I am going to use a switch statement to get them all being dealt with correctly</p>\n\n<p>Does anyone know the comprehensive list of error codes and errors so that I can take them all into account without having to think through all the options which might mean I miss one</p>\n",
+    "body_markdown": "What I need is a complete list of FirebaseAuthentication codes for all the different login errors and also a list of all those errors. So far I have found some by trial and error but can&#39;t take the risk I have missed some.\r\n\r\nI am using the Firebase simple login to log in with email/password, facebook, twitter and also anonymous logins. Obviously with this many login methods there are lots of ways the user can fail to login correctly (incorrect email format, didn&#39;t enter a password etc). Currently I am using this code:\r\n\r\n    ... authenticateWithDictionary method\r\n\r\n    completion:^(NSError * error, id&lt;PUser&gt; user) {\r\n        \r\n        if (!error) {\r\n    \r\n            [self loginButtonPressed:Nil];\r\n        }\r\n        else {\r\n\r\n            [UIView alertWithTitle:bErrorTitle withError:error];\r\n        }\r\n\r\nThe only issue with this is I end my getting errors raised which read like this:\r\n\r\n    **(Error Code: EMAIL_TAKEN) The specified email address is already in use.**\r\n\r\nThis is fine to let me know what has gone wrong in testing but once the app goes live I will want individual messages to \r\na) look tidier\r\nb) let the user know why they have got this error\r\n\r\nSo far through trial and error I have figured out the following: \r\n\r\nerror code\r\n\r\n    -5      INVALID EMAIL - empty or incorrect format\r\n    -6      INVALID PASSWORD\r\n    -9      EMAIL TAKEN\r\n\r\nOnce I have a complete list I am going to use a switch statement to get them all being dealt with correctly\r\n\r\nDoes anyone know the comprehensive list of error codes and errors so that I can take them all into account without having to think through all the options which might mean I miss one",
     "collected": {
-        "$date": "2024-05-23T08:46:42.611Z"
+        "$date": "2024-05-23T13:59:08.564Z"
     },
     "comment_count": 0,
-    "creation_date": 1277841835,
+    "creation_date": 1418292635,
     "delete_vote_count": 0,
     "down_vote_count": 0,
     "favorite_count": 0,
-    "last_activity_date": 1279747757,
-    "last_edit_date": 1279747757,
-    "link": "https://stackoverflow.com/questions/3144295/querying-google-datastore-by-key-and-sorting-by-another-property",
+    "last_activity_date": 1654133607,
+    "link": "https://stackoverflow.com/questions/27420176/list-of-authorisation-errors-with-firebase-login",
     "owner": {
-        "account_id": 66690,
-        "reputation": 2047,
-        "user_id": 195539,
+        "account_id": 3203153,
+        "reputation": 6053,
+        "user_id": 2704817,
         "user_type": "registered",
-        "accept_rate": 38,
-        "profile_image": "https://i.sstatic.net/TAsXe.jpg?s=256",
-        "display_name": "Mark M",
-        "link": "https://stackoverflow.com/users/195539/mark-m"
+        "accept_rate": 84,
+        "profile_image": "https://i.sstatic.net/31xfi.jpg?s=256",
+        "display_name": "sam_smith",
+        "link": "https://stackoverflow.com/users/2704817/sam-smith"
     },
-    "question_id": 3144295,
+    "question_id": 27420176,
     "reopen_vote_count": 0,
-    "score": 4,
-    "share_link": "https://stackoverflow.com/q/3144295",
+    "score": 6,
+    "share_link": "https://stackoverflow.com/q/27420176",
     "tags": [
-        "java",
-        "google-app-engine",
-        "google-cloud-datastore"
+        "ios",
+        "objective-c",
+        "firebase",
+        "firebase-security"
     ],
-    "title": "Querying google datastore by key and sorting by another property",
-    "up_vote_count": 4,
-    "view_count": 1252,
+    "title": "List of Authorisation errors with Firebase login",
+    "up_vote_count": 6,
+    "view_count": 18644,
     "matched_answers": [
         {
-            "_id": 3144306,
-            "body": "<p>Since you have the keys, it would be most efficient to just get all of the entities directly by key and then sort them by date yourself.</p>\n\n<p>Doing the sorting yourself may also save you from needing an index on the <code>EndeavorUpdate</code> model's date created field (depending on whether you also need such an index somewhere else in your code or not).</p>\n",
-            "body_markdown": "Since you have the keys, it would be most efficient to just get all of the entities directly by key and then sort them by date yourself.\r\n\r\nDoing the sorting yourself may also save you from needing an index on the `EndeavorUpdate` model&#39;s date created field (depending on whether you also need such an index somewhere else in your code or not).",
+            "_id": 64147367,
+            "body": "<p>Localize Firebase error messages in PT-BR</p>\n<p><a href=\"https://gist.github.com/Albejr/a38cdeac247ef177986c99629680afb4\" rel=\"nofollow noreferrer\">https://gist.github.com/Albejr/a38cdeac247ef177986c99629680afb4</a></p>\n<pre><code>catchError(err =&gt; {\n    const errorCode = err.code;\n    let errorMessage = this.VerifyErroCode(errorCode);\n\n    if (errorMessage == null) {\n        errorMessage = err.message;\n    }\n    \n    console.log(errorMessage);\n})\n\nVerifyErroCode(errorCode: string): string {\n        // fonte: https://firebase.google.com/docs/reference/js/firebase.auth.Auth\n        // fonte: https://firebase.google.com/docs/auth/admin/errors?hl=pt-br\n        switch (errorCode) {\n            case 'auth/app-deleted':\n                return 'O banco de dados n\u00e3o foi localizado.';\n            case 'auth/expired-action-code':\n                return 'O c\u00f3digo da a\u00e7\u00e3o o ou link expirou.';\n            case 'auth/invalid-action-code':\n                return 'O c\u00f3digo da a\u00e7\u00e3o \u00e9 inv\u00e1lido. Isso pode acontecer se o c\u00f3digo estiver malformado ou j\u00e1 tiver sido usado.';\n            case 'auth/user-disabled':\n                return 'O usu\u00e1rio correspondente \u00e0 credencial fornecida foi desativado.';\n            case 'auth/user-not-found':\n                return 'O usu\u00e1rio n\u00e3o correponde \u00e0 nenhuma credencial.';\n            case 'auth/weak-password':\n                return 'A senha \u00e9 muito fraca.';\n            case 'auth/email-already-in-use':\n                return 'J\u00e1 existi uma conta com o endere\u00e7o de email fornecido.';\n            case 'auth/invalid-email':\n                return 'O endere\u00e7o de e-mail n\u00e3o \u00e9 v\u00e1lido.';\n            case 'auth/operation-not-allowed':\n                return 'O tipo de conta correspondente \u00e0 esta credencial, ainda n\u00e3o encontra-se ativada.';\n            case 'auth/account-exists-with-different-credential':\n                return 'E-mail j\u00e1 associado a outra conta.';\n            case 'auth/auth-domain-config-required':\n                return 'A configura\u00e7\u00e3o para autentica\u00e7\u00e3o n\u00e3o foi fornecida.';\n            case 'auth/credential-already-in-use':\n                return 'J\u00e1 existe uma conta para esta credencial.';\n            case 'auth/operation-not-supported-in-this-environment':\n                return 'Esta opera\u00e7\u00e3o n\u00e3o \u00e9 suportada no ambiente que est\u00e1 sendo executada. Verifique se deve ser http ou https.';\n            case 'auth/timeout':\n                return 'Excedido o tempo de resposta. O dom\u00ednio pode n\u00e3o estar autorizado para realizar opera\u00e7\u00f5es.';\n            case 'auth/missing-android-pkg-name':\n                return 'Deve ser fornecido um nome de pacote para instala\u00e7\u00e3o do aplicativo Android.';\n            case 'auth/missing-continue-uri':\n                return 'A pr\u00f3xima URL deve ser fornecida na solicita\u00e7\u00e3o.';\n            case 'auth/missing-ios-bundle-id':\n                return 'Deve ser fornecido um nome de pacote para instala\u00e7\u00e3o do aplicativo iOS.';\n            case 'auth/invalid-continue-uri':\n                return 'A pr\u00f3xima URL fornecida na solicita\u00e7\u00e3o \u00e9 inv\u00e1lida.';\n            case 'auth/unauthorized-continue-uri':\n                return 'O dom\u00ednio da pr\u00f3xima URL n\u00e3o est\u00e1 na lista de autoriza\u00e7\u00f5es.';\n            case 'auth/invalid-dynamic-link-domain':\n                return 'O dom\u00ednio de link din\u00e2mico fornecido, n\u00e3o est\u00e1 autorizado ou configurado no projeto atual.';\n            case 'auth/argument-error':\n                return 'Verifique a configura\u00e7\u00e3o de link para o aplicativo.';\n            case 'auth/invalid-persistence-type':\n                return 'O tipo especificado para a persist\u00eancia dos dados \u00e9 inv\u00e1lido.';\n            case 'auth/unsupported-persistence-type':\n                return 'O ambiente atual n\u00e3o suportar o tipo especificado para persist\u00eancia dos dados.';\n            case 'auth/invalid-credential':\n                return 'A credencial expirou ou est\u00e1 mal formada.';\n            case 'auth/wrong-password':\n                return 'Senha incorreta.';\n            case 'auth/invalid-verification-code':\n                return 'O c\u00f3digo de verifica\u00e7\u00e3o da credencial n\u00e3o \u00e9 v\u00e1lido.';\n            case 'auth/invalid-verification-id':\n                return 'O ID de verifica\u00e7\u00e3o da credencial n\u00e3o \u00e9 v\u00e1lido.';\n            case 'auth/custom-token-mismatch':\n                return 'O token est\u00e1 diferente do padr\u00e3o solicitado.';\n            case 'auth/invalid-custom-token':\n                return 'O token fornecido n\u00e3o \u00e9 v\u00e1lido.';\n            case 'auth/captcha-check-failed':\n                return 'O token de resposta do reCAPTCHA n\u00e3o \u00e9 v\u00e1lido, expirou ou o dom\u00ednio n\u00e3o \u00e9 permitido.';\n            case 'auth/invalid-phone-number':\n                return 'O n\u00famero de telefone est\u00e1 em um formato inv\u00e1lido (padr\u00e3o E.164).';\n            case 'auth/missing-phone-number':\n                return 'O n\u00famero de telefone \u00e9 requerido.';\n            case 'auth/quota-exceeded':\n                return 'A cota de SMS foi excedida.';\n            case 'auth/cancelled-popup-request':\n                return 'Somente uma solicita\u00e7\u00e3o de janela pop-up \u00e9 permitida de uma s\u00f3 vez.';\n            case 'auth/popup-blocked':\n                return 'A janela pop-up foi bloqueado pelo navegador.';\n            case 'auth/popup-closed-by-user':\n                return 'A janela pop-up foi fechada pelo usu\u00e1rio sem concluir o login no provedor.';\n            case 'auth/unauthorized-domain':\n                return 'O dom\u00ednio do aplicativo n\u00e3o est\u00e1 autorizado para realizar opera\u00e7\u00f5es.';\n            case 'auth/invalid-user-token':\n                return 'O usu\u00e1rio atual n\u00e3o foi identificado.';\n            case 'auth/user-token-expired':\n                return 'O token do usu\u00e1rio atual expirou.';\n            case 'auth/null-user':\n                return 'O usu\u00e1rio atual \u00e9 nulo.';\n            case 'auth/app-not-authorized':\n                return 'Aplica\u00e7\u00e3o n\u00e3o autorizada para autenticar com a chave informada.';\n            case 'auth/invalid-api-key':\n                return 'A chave da API fornecida \u00e9 inv\u00e1lida.';\n            case 'auth/network-request-failed':\n                return 'Falha de conex\u00e3o com a rede.';\n            case 'auth/requires-recent-login':\n                return 'O \u00faltimo hor\u00e1rio de acesso do usu\u00e1rio n\u00e3o atende ao limite de seguran\u00e7a.';\n            case 'auth/too-many-requests':\n                return 'As solicita\u00e7\u00f5es foram bloqueadas devido a atividades incomuns. Tente novamente depois que algum tempo.';\n            case 'auth/web-storage-unsupported':\n                return 'O navegador n\u00e3o suporta armazenamento ou se o usu\u00e1rio desativou este recurso.';\n            case 'auth/invalid-claims':\n                return 'Os atributos de cadastro personalizado s\u00e3o inv\u00e1lidos.';\n            case 'auth/claims-too-large':\n                return 'O tamanho da requisi\u00e7\u00e3o excede o tamanho m\u00e1ximo permitido de 1 Megabyte.';\n            case 'auth/id-token-expired':\n                return 'O token informado expirou.';\n            case 'auth/id-token-revoked':\n                return 'O token informado perdeu a validade.';\n            case 'auth/invalid-argument':\n                return 'Um argumento inv\u00e1lido foi fornecido a um m\u00e9todo.';\n            case 'auth/invalid-creation-time':\n                return 'O hor\u00e1rio da cria\u00e7\u00e3o precisa ser uma data UTC v\u00e1lida.';\n            case 'auth/invalid-disabled-field':\n                return 'A propriedade para usu\u00e1rio desabilitado \u00e9 inv\u00e1lida.';\n            case 'auth/invalid-display-name':\n                return 'O nome do usu\u00e1rio \u00e9 inv\u00e1lido.';\n            case 'auth/invalid-email-verified':\n                return 'O e-mail \u00e9 inv\u00e1lido.';\n            case 'auth/invalid-hash-algorithm':\n                return 'O algoritmo de HASH n\u00e3o \u00e9 uma criptografia compat\u00edvel.';\n            case 'auth/invalid-hash-block-size':\n                return 'O tamanho do bloco de HASH n\u00e3o \u00e9 v\u00e1lido.';\n            case 'auth/invalid-hash-derived-key-length':\n                return 'O tamanho da chave derivada do HASH n\u00e3o \u00e9 v\u00e1lido.';\n            case 'auth/invalid-hash-key':\n                return 'A chave de HASH precisa ter um buffer de byte v\u00e1lido.';\n            case 'auth/invalid-hash-memory-cost':\n                return 'O custo da mem\u00f3ria HASH n\u00e3o \u00e9 v\u00e1lido.';\n            case 'auth/invalid-hash-parallelization':\n                return 'O carregamento em paralelo do HASH n\u00e3o \u00e9 v\u00e1lido.';\n            case 'auth/invalid-hash-rounds':\n                return 'O arredondamento de HASH n\u00e3o \u00e9 v\u00e1lido.';\n            case 'auth/invalid-hash-salt-separator':\n                return 'O campo do separador de SALT do algoritmo de gera\u00e7\u00e3o de HASH precisa ser um buffer de byte v\u00e1lido.';\n            case 'auth/invalid-id-token':\n                return 'O c\u00f3digo do token informado n\u00e3o \u00e9 v\u00e1lido.';\n            case 'auth/invalid-last-sign-in-time':\n                return 'O \u00faltimo hor\u00e1rio de login precisa ser uma data UTC v\u00e1lida.';\n            case 'auth/invalid-page-token':\n                return 'A pr\u00f3xima URL fornecida na solicita\u00e7\u00e3o \u00e9 inv\u00e1lida.';\n            case 'auth/invalid-password':\n                return 'A senha \u00e9 inv\u00e1lida, precisa ter pelo menos 6 caracteres.';\n            case 'auth/invalid-password-hash':\n                return 'O HASH da senha n\u00e3o \u00e9 v\u00e1lida.';\n            case 'auth/invalid-password-salt':\n                return 'O SALT da senha n\u00e3o \u00e9 v\u00e1lido.';\n            case 'auth/invalid-photo-url':\n                return 'A URL da foto de usu\u00e1rio \u00e9 inv\u00e1lido.';\n            case 'auth/invalid-provider-id':\n                return 'O identificador de provedor n\u00e3o \u00e9 compat\u00edvel.';\n            case 'auth/invalid-session-cookie-duration':\n                return 'A dura\u00e7\u00e3o do COOKIE da sess\u00e3o precisa ser um n\u00famero v\u00e1lido em milissegundos, entre 5 minutos e 2 semanas.';\n            case 'auth/invalid-uid':\n                return 'O identificador fornecido deve ter no m\u00e1ximo 128 caracteres.';\n            case 'auth/invalid-user-import':\n                return 'O registro do usu\u00e1rio a ser importado n\u00e3o \u00e9 v\u00e1lido.';\n            case 'auth/invalid-provider-data':\n                return 'O provedor de dados n\u00e3o \u00e9 v\u00e1lido.';\n            case 'auth/maximum-user-count-exceeded':\n                return 'O n\u00famero m\u00e1ximo permitido de usu\u00e1rios a serem importados foi excedido.';\n            case 'auth/missing-hash-algorithm':\n                return '\u00c9 necess\u00e1rio fornecer o algoritmo de gera\u00e7\u00e3o de HASH e seus par\u00e2metros para importar usu\u00e1rios.';\n            case 'auth/missing-uid':\n                return 'Um identificador \u00e9 necess\u00e1rio para a opera\u00e7\u00e3o atual.';\n            case 'auth/reserved-claims':\n                return 'Uma ou mais propriedades personalizadas fornecidas usaram palavras reservadas.';\n            case 'auth/session-cookie-revoked':\n                return 'O COOKIE da sess\u00e3o perdeu a validade.';\n            case 'auth/uid-alread-exists':\n                return 'O indentificador fornecido j\u00e1 est\u00e1 em uso.';\n            case 'auth/email-already-exists':\n                return 'O e-mail fornecido j\u00e1 est\u00e1 em uso.';\n            case 'auth/phone-number-already-exists':\n                return 'O telefone fornecido j\u00e1 est\u00e1 em uso.';\n            case 'auth/project-not-found':\n                return 'Nenhum projeto foi encontrado.';\n            case 'auth/insufficient-permission':\n                return 'A credencial utilizada n\u00e3o tem permiss\u00e3o para acessar o recurso solicitado.';\n            case 'auth/internal-error':\n                return 'O servidor de autentica\u00e7\u00e3o encontrou um erro inesperado ao tentar processar a solicita\u00e7\u00e3o.';\n            default:\n                return null;\n        }\n    }\n</code></pre>\n",
+            "body_markdown": "Localize Firebase error messages in PT-BR\r\n\r\nhttps://gist.github.com/Albejr/a38cdeac247ef177986c99629680afb4\r\n\r\n    catchError(err =&gt; {\r\n        const errorCode = err.code;\r\n        let errorMessage = this.VerifyErroCode(errorCode);\r\n    \r\n        if (errorMessage == null) {\r\n            errorMessage = err.message;\r\n        }\r\n        \r\n        console.log(errorMessage);\r\n    })\r\n\r\n    VerifyErroCode(errorCode: string): string {\r\n            // fonte: https://firebase.google.com/docs/reference/js/firebase.auth.Auth\r\n            // fonte: https://firebase.google.com/docs/auth/admin/errors?hl=pt-br\r\n            switch (errorCode) {\r\n                case &#39;auth/app-deleted&#39;:\r\n                    return &#39;O banco de dados n&#227;o foi localizado.&#39;;\r\n                case &#39;auth/expired-action-code&#39;:\r\n                    return &#39;O c&#243;digo da a&#231;&#227;o o ou link expirou.&#39;;\r\n                case &#39;auth/invalid-action-code&#39;:\r\n                    return &#39;O c&#243;digo da a&#231;&#227;o &#233; inv&#225;lido. Isso pode acontecer se o c&#243;digo estiver malformado ou j&#225; tiver sido usado.&#39;;\r\n                case &#39;auth/user-disabled&#39;:\r\n                    return &#39;O usu&#225;rio correspondente &#224; credencial fornecida foi desativado.&#39;;\r\n                case &#39;auth/user-not-found&#39;:\r\n                    return &#39;O usu&#225;rio n&#227;o correponde &#224; nenhuma credencial.&#39;;\r\n                case &#39;auth/weak-password&#39;:\r\n                    return &#39;A senha &#233; muito fraca.&#39;;\r\n                case &#39;auth/email-already-in-use&#39;:\r\n                    return &#39;J&#225; existi uma conta com o endere&#231;o de email fornecido.&#39;;\r\n                case &#39;auth/invalid-email&#39;:\r\n                    return &#39;O endere&#231;o de e-mail n&#227;o &#233; v&#225;lido.&#39;;\r\n                case &#39;auth/operation-not-allowed&#39;:\r\n                    return &#39;O tipo de conta correspondente &#224; esta credencial, ainda n&#227;o encontra-se ativada.&#39;;\r\n                case &#39;auth/account-exists-with-different-credential&#39;:\r\n                    return &#39;E-mail j&#225; associado a outra conta.&#39;;\r\n                case &#39;auth/auth-domain-config-required&#39;:\r\n                    return &#39;A configura&#231;&#227;o para autentica&#231;&#227;o n&#227;o foi fornecida.&#39;;\r\n                case &#39;auth/credential-already-in-use&#39;:\r\n                    return &#39;J&#225; existe uma conta para esta credencial.&#39;;\r\n                case &#39;auth/operation-not-supported-in-this-environment&#39;:\r\n                    return &#39;Esta opera&#231;&#227;o n&#227;o &#233; suportada no ambiente que est&#225; sendo executada. Verifique se deve ser http ou https.&#39;;\r\n                case &#39;auth/timeout&#39;:\r\n                    return &#39;Excedido o tempo de resposta. O dom&#237;nio pode n&#227;o estar autorizado para realizar opera&#231;&#245;es.&#39;;\r\n                case &#39;auth/missing-android-pkg-name&#39;:\r\n                    return &#39;Deve ser fornecido um nome de pacote para instala&#231;&#227;o do aplicativo Android.&#39;;\r\n                case &#39;auth/missing-continue-uri&#39;:\r\n                    return &#39;A pr&#243;xima URL deve ser fornecida na solicita&#231;&#227;o.&#39;;\r\n                case &#39;auth/missing-ios-bundle-id&#39;:\r\n                    return &#39;Deve ser fornecido um nome de pacote para instala&#231;&#227;o do aplicativo iOS.&#39;;\r\n                case &#39;auth/invalid-continue-uri&#39;:\r\n                    return &#39;A pr&#243;xima URL fornecida na solicita&#231;&#227;o &#233; inv&#225;lida.&#39;;\r\n                case &#39;auth/unauthorized-continue-uri&#39;:\r\n                    return &#39;O dom&#237;nio da pr&#243;xima URL n&#227;o est&#225; na lista de autoriza&#231;&#245;es.&#39;;\r\n                case &#39;auth/invalid-dynamic-link-domain&#39;:\r\n                    return &#39;O dom&#237;nio de link din&#226;mico fornecido, n&#227;o est&#225; autorizado ou configurado no projeto atual.&#39;;\r\n                case &#39;auth/argument-error&#39;:\r\n                    return &#39;Verifique a configura&#231;&#227;o de link para o aplicativo.&#39;;\r\n                case &#39;auth/invalid-persistence-type&#39;:\r\n                    return &#39;O tipo especificado para a persist&#234;ncia dos dados &#233; inv&#225;lido.&#39;;\r\n                case &#39;auth/unsupported-persistence-type&#39;:\r\n                    return &#39;O ambiente atual n&#227;o suportar o tipo especificado para persist&#234;ncia dos dados.&#39;;\r\n                case &#39;auth/invalid-credential&#39;:\r\n                    return &#39;A credencial expirou ou est&#225; mal formada.&#39;;\r\n                case &#39;auth/wrong-password&#39;:\r\n                    return &#39;Senha incorreta.&#39;;\r\n                case &#39;auth/invalid-verification-code&#39;:\r\n                    return &#39;O c&#243;digo de verifica&#231;&#227;o da credencial n&#227;o &#233; v&#225;lido.&#39;;\r\n                case &#39;auth/invalid-verification-id&#39;:\r\n                    return &#39;O ID de verifica&#231;&#227;o da credencial n&#227;o &#233; v&#225;lido.&#39;;\r\n                case &#39;auth/custom-token-mismatch&#39;:\r\n                    return &#39;O token est&#225; diferente do padr&#227;o solicitado.&#39;;\r\n                case &#39;auth/invalid-custom-token&#39;:\r\n                    return &#39;O token fornecido n&#227;o &#233; v&#225;lido.&#39;;\r\n                case &#39;auth/captcha-check-failed&#39;:\r\n                    return &#39;O token de resposta do reCAPTCHA n&#227;o &#233; v&#225;lido, expirou ou o dom&#237;nio n&#227;o &#233; permitido.&#39;;\r\n                case &#39;auth/invalid-phone-number&#39;:\r\n                    return &#39;O n&#250;mero de telefone est&#225; em um formato inv&#225;lido (padr&#227;o E.164).&#39;;\r\n                case &#39;auth/missing-phone-number&#39;:\r\n                    return &#39;O n&#250;mero de telefone &#233; requerido.&#39;;\r\n                case &#39;auth/quota-exceeded&#39;:\r\n                    return &#39;A cota de SMS foi excedida.&#39;;\r\n                case &#39;auth/cancelled-popup-request&#39;:\r\n                    return &#39;Somente uma solicita&#231;&#227;o de janela pop-up &#233; permitida de uma s&#243; vez.&#39;;\r\n                case &#39;auth/popup-blocked&#39;:\r\n                    return &#39;A janela pop-up foi bloqueado pelo navegador.&#39;;\r\n                case &#39;auth/popup-closed-by-user&#39;:\r\n                    return &#39;A janela pop-up foi fechada pelo usu&#225;rio sem concluir o login no provedor.&#39;;\r\n                case &#39;auth/unauthorized-domain&#39;:\r\n                    return &#39;O dom&#237;nio do aplicativo n&#227;o est&#225; autorizado para realizar opera&#231;&#245;es.&#39;;\r\n                case &#39;auth/invalid-user-token&#39;:\r\n                    return &#39;O usu&#225;rio atual n&#227;o foi identificado.&#39;;\r\n                case &#39;auth/user-token-expired&#39;:\r\n                    return &#39;O token do usu&#225;rio atual expirou.&#39;;\r\n                case &#39;auth/null-user&#39;:\r\n                    return &#39;O usu&#225;rio atual &#233; nulo.&#39;;\r\n                case &#39;auth/app-not-authorized&#39;:\r\n                    return &#39;Aplica&#231;&#227;o n&#227;o autorizada para autenticar com a chave informada.&#39;;\r\n                case &#39;auth/invalid-api-key&#39;:\r\n                    return &#39;A chave da API fornecida &#233; inv&#225;lida.&#39;;\r\n                case &#39;auth/network-request-failed&#39;:\r\n                    return &#39;Falha de conex&#227;o com a rede.&#39;;\r\n                case &#39;auth/requires-recent-login&#39;:\r\n                    return &#39;O &#250;ltimo hor&#225;rio de acesso do usu&#225;rio n&#227;o atende ao limite de seguran&#231;a.&#39;;\r\n                case &#39;auth/too-many-requests&#39;:\r\n                    return &#39;As solicita&#231;&#245;es foram bloqueadas devido a atividades incomuns. Tente novamente depois que algum tempo.&#39;;\r\n                case &#39;auth/web-storage-unsupported&#39;:\r\n                    return &#39;O navegador n&#227;o suporta armazenamento ou se o usu&#225;rio desativou este recurso.&#39;;\r\n                case &#39;auth/invalid-claims&#39;:\r\n                    return &#39;Os atributos de cadastro personalizado s&#227;o inv&#225;lidos.&#39;;\r\n                case &#39;auth/claims-too-large&#39;:\r\n                    return &#39;O tamanho da requisi&#231;&#227;o excede o tamanho m&#225;ximo permitido de 1 Megabyte.&#39;;\r\n                case &#39;auth/id-token-expired&#39;:\r\n                    return &#39;O token informado expirou.&#39;;\r\n                case &#39;auth/id-token-revoked&#39;:\r\n                    return &#39;O token informado perdeu a validade.&#39;;\r\n                case &#39;auth/invalid-argument&#39;:\r\n                    return &#39;Um argumento inv&#225;lido foi fornecido a um m&#233;todo.&#39;;\r\n                case &#39;auth/invalid-creation-time&#39;:\r\n                    return &#39;O hor&#225;rio da cria&#231;&#227;o precisa ser uma data UTC v&#225;lida.&#39;;\r\n                case &#39;auth/invalid-disabled-field&#39;:\r\n                    return &#39;A propriedade para usu&#225;rio desabilitado &#233; inv&#225;lida.&#39;;\r\n                case &#39;auth/invalid-display-name&#39;:\r\n                    return &#39;O nome do usu&#225;rio &#233; inv&#225;lido.&#39;;\r\n                case &#39;auth/invalid-email-verified&#39;:\r\n                    return &#39;O e-mail &#233; inv&#225;lido.&#39;;\r\n                case &#39;auth/invalid-hash-algorithm&#39;:\r\n                    return &#39;O algoritmo de HASH n&#227;o &#233; uma criptografia compat&#237;vel.&#39;;\r\n                case &#39;auth/invalid-hash-block-size&#39;:\r\n                    return &#39;O tamanho do bloco de HASH n&#227;o &#233; v&#225;lido.&#39;;\r\n                case &#39;auth/invalid-hash-derived-key-length&#39;:\r\n                    return &#39;O tamanho da chave derivada do HASH n&#227;o &#233; v&#225;lido.&#39;;\r\n                case &#39;auth/invalid-hash-key&#39;:\r\n                    return &#39;A chave de HASH precisa ter um buffer de byte v&#225;lido.&#39;;\r\n                case &#39;auth/invalid-hash-memory-cost&#39;:\r\n                    return &#39;O custo da mem&#243;ria HASH n&#227;o &#233; v&#225;lido.&#39;;\r\n                case &#39;auth/invalid-hash-parallelization&#39;:\r\n                    return &#39;O carregamento em paralelo do HASH n&#227;o &#233; v&#225;lido.&#39;;\r\n                case &#39;auth/invalid-hash-rounds&#39;:\r\n                    return &#39;O arredondamento de HASH n&#227;o &#233; v&#225;lido.&#39;;\r\n                case &#39;auth/invalid-hash-salt-separator&#39;:\r\n                    return &#39;O campo do separador de SALT do algoritmo de gera&#231;&#227;o de HASH precisa ser um buffer de byte v&#225;lido.&#39;;\r\n                case &#39;auth/invalid-id-token&#39;:\r\n                    return &#39;O c&#243;digo do token informado n&#227;o &#233; v&#225;lido.&#39;;\r\n                case &#39;auth/invalid-last-sign-in-time&#39;:\r\n                    return &#39;O &#250;ltimo hor&#225;rio de login precisa ser uma data UTC v&#225;lida.&#39;;\r\n                case &#39;auth/invalid-page-token&#39;:\r\n                    return &#39;A pr&#243;xima URL fornecida na solicita&#231;&#227;o &#233; inv&#225;lida.&#39;;\r\n                case &#39;auth/invalid-password&#39;:\r\n                    return &#39;A senha &#233; inv&#225;lida, precisa ter pelo menos 6 caracteres.&#39;;\r\n                case &#39;auth/invalid-password-hash&#39;:\r\n                    return &#39;O HASH da senha n&#227;o &#233; v&#225;lida.&#39;;\r\n                case &#39;auth/invalid-password-salt&#39;:\r\n                    return &#39;O SALT da senha n&#227;o &#233; v&#225;lido.&#39;;\r\n                case &#39;auth/invalid-photo-url&#39;:\r\n                    return &#39;A URL da foto de usu&#225;rio &#233; inv&#225;lido.&#39;;\r\n                case &#39;auth/invalid-provider-id&#39;:\r\n                    return &#39;O identificador de provedor n&#227;o &#233; compat&#237;vel.&#39;;\r\n                case &#39;auth/invalid-session-cookie-duration&#39;:\r\n                    return &#39;A dura&#231;&#227;o do COOKIE da sess&#227;o precisa ser um n&#250;mero v&#225;lido em milissegundos, entre 5 minutos e 2 semanas.&#39;;\r\n                case &#39;auth/invalid-uid&#39;:\r\n                    return &#39;O identificador fornecido deve ter no m&#225;ximo 128 caracteres.&#39;;\r\n                case &#39;auth/invalid-user-import&#39;:\r\n                    return &#39;O registro do usu&#225;rio a ser importado n&#227;o &#233; v&#225;lido.&#39;;\r\n                case &#39;auth/invalid-provider-data&#39;:\r\n                    return &#39;O provedor de dados n&#227;o &#233; v&#225;lido.&#39;;\r\n                case &#39;auth/maximum-user-count-exceeded&#39;:\r\n                    return &#39;O n&#250;mero m&#225;ximo permitido de usu&#225;rios a serem importados foi excedido.&#39;;\r\n                case &#39;auth/missing-hash-algorithm&#39;:\r\n                    return &#39;&#201; necess&#225;rio fornecer o algoritmo de gera&#231;&#227;o de HASH e seus par&#226;metros para importar usu&#225;rios.&#39;;\r\n                case &#39;auth/missing-uid&#39;:\r\n                    return &#39;Um identificador &#233; necess&#225;rio para a opera&#231;&#227;o atual.&#39;;\r\n                case &#39;auth/reserved-claims&#39;:\r\n                    return &#39;Uma ou mais propriedades personalizadas fornecidas usaram palavras reservadas.&#39;;\r\n                case &#39;auth/session-cookie-revoked&#39;:\r\n                    return &#39;O COOKIE da sess&#227;o perdeu a validade.&#39;;\r\n                case &#39;auth/uid-alread-exists&#39;:\r\n                    return &#39;O indentificador fornecido j&#225; est&#225; em uso.&#39;;\r\n                case &#39;auth/email-already-exists&#39;:\r\n                    return &#39;O e-mail fornecido j&#225; est&#225; em uso.&#39;;\r\n                case &#39;auth/phone-number-already-exists&#39;:\r\n                    return &#39;O telefone fornecido j&#225; est&#225; em uso.&#39;;\r\n                case &#39;auth/project-not-found&#39;:\r\n                    return &#39;Nenhum projeto foi encontrado.&#39;;\r\n                case &#39;auth/insufficient-permission&#39;:\r\n                    return &#39;A credencial utilizada n&#227;o tem permiss&#227;o para acessar o recurso solicitado.&#39;;\r\n                case &#39;auth/internal-error&#39;:\r\n                    return &#39;O servidor de autentica&#231;&#227;o encontrou um erro inesperado ao tentar processar a solicita&#231;&#227;o.&#39;;\r\n                default:\r\n                    return null;\r\n            }\r\n        }",
             "comment_count": 0,
-            "content_license": "CC BY-SA 2.5",
-            "creation_date": 1277841926,
+            "content_license": "CC BY-SA 4.0",
+            "creation_date": 1601510609,
             "down_vote_count": 0,
             "is_accepted": false,
-            "last_activity_date": 1277841926,
+            "last_activity_date": 1601510609,
             "last_edit_date": null,
-            "link": "https://stackoverflow.com/questions/3144295/querying-google-datastore-by-key-and-sorting-by-another-property/3144306#3144306",
+            "link": "https://stackoverflow.com/questions/27420176/list-of-authorisation-errors-with-firebase-login/64147367#64147367",
             "owner": {
-                "account_id": 54985,
-                "reputation": 16145,
-                "user_id": 164602,
+                "account_id": 5139535,
+                "reputation": 98,
+                "user_id": 4117348,
                 "user_type": "registered",
-                "profile_image": "https://www.gravatar.com/avatar/120bfc3ff5ce133373ab9f5c0780a6d5?s=256&d=identicon&r=PG",
-                "display_name": "David Underhill",
-                "link": "https://stackoverflow.com/users/164602/david-underhill",
-                "accept_rate": 92
+                "profile_image": "https://lh5.googleusercontent.com/-LYdNYfr3zGk/AAAAAAAAAAI/AAAAAAAAACw/HfpA0OYub-4/photo.jpg?sz=256",
+                "display_name": "Albertino J&#250;nior",
+                "link": "https://stackoverflow.com/users/4117348/albertino-j%c3%banior",
+                "accept_rate": null
             },
-            "question_id": 3144295,
-            "score": 4,
+            "question_id": 27420176,
+            "score": 3,
             "scraped": {
-                "$date": "2024-07-11T16:19:07.113Z"
+                "$date": "2024-07-14T15:59:18.389Z"
             },
-            "title": "Querying google datastore by key and sorting by another property",
+            "title": "List of Authorisation errors with Firebase login",
+            "up_vote_count": 3
+        },
+        {
+            "_id": 48129129,
+            "body": "<p>You can find all firebase auth errors codes and explanations under <code>FIRAuthErrorCode</code> enum in <code>FirebaseAuth.framework</code></p>\n\n<pre><code>/*\n Indicates a validation error with the custom token.\n */\nFIRAuthErrorCodeInvalidCustomToken = 17000,\n\n/*\n Indicates the service account and the API key belong to different projects.\n */\nFIRAuthErrorCodeCustomTokenMismatch = 17002,\n\n/*\n Indicates the IDP token or requestUri is invalid.\n */\nFIRAuthErrorCodeInvalidCredential = 17004,\n\n/*\n Indicates the user's account is disabled on the server.\n */\nFIRAuthErrorCodeUserDisabled = 17005,\n\n/*\n Indicates the administrator disabled sign in with the specified identity provider.\n */\nFIRAuthErrorCodeOperationNotAllowed = 17006,\n\n/*\n Indicates the email used to attempt a sign up is already in use.\n */\nFIRAuthErrorCodeEmailAlreadyInUse = 17007,\n\n/*\n Indicates the email is invalid.\n */\nFIRAuthErrorCodeInvalidEmail = 17008,\n\n/*\n Indicates the user attempted sign in with a wrong password.\n */\nFIRAuthErrorCodeWrongPassword = 17009,\n\n/*\n Indicates that too many requests were made to a server method.\n */\nFIRAuthErrorCodeTooManyRequests = 17010,\n\n/*\n Indicates the user account was not found.\n */\nFIRAuthErrorCodeUserNotFound = 17011,\n\n/*\n Indicates account linking is required.\n */\nFIRAuthErrorCodeAccountExistsWithDifferentCredential = 17012,\n\n/*\n Same enum as @c FIRAuthErrorCodeAccountExistsWithDifferentCredential ,\n    but with incorrect spelling. Only exists for backwards compatiblity.\n */\nFIRAuthErrrorCodeAccountExistsWithDifferentCredential = 17012,\n\n/*\n Indicates the user has attemped to change email or password more than 5 minutes after\n    signing in.\n */\nFIRAuthErrorCodeRequiresRecentLogin = 17014,\n\n/*\n Indicates an attempt to link a provider to which the account is already linked.\n */\nFIRAuthErrorCodeProviderAlreadyLinked = 17015,\n\n/*\n Indicates an attempt to unlink a provider that is not linked.\n */\nFIRAuthErrorCodeNoSuchProvider = 17016,\n\n/*\n Indicates user's saved auth credential is invalid, the user needs to sign in again.\n */\nFIRAuthErrorCodeInvalidUserToken = 17017,\n\n/*\n Indicates a network error occurred (such as a timeout, interrupted connection, or\n    unreachable host). These types of errors are often recoverable with a retry. The @c\n    NSUnderlyingError field in the @c NSError.userInfo dictionary will contain the error\n    encountered.\n */\nFIRAuthErrorCodeNetworkError = 17020,\n\n/*\n Indicates the saved token has expired, for example, the user may have changed account\n    password on another device. The user needs to sign in again on the device that made this\n    request.\n */\nFIRAuthErrorCodeUserTokenExpired = 17021,\n\n/*\n Indicates an invalid API key was supplied in the request.\n */\nFIRAuthErrorCodeInvalidAPIKey = 17023,\n\n/*\n Indicates that an attempt was made to reauthenticate with a user which is not the current\n    user.\n */\nFIRAuthErrorCodeUserMismatch = 17024,\n\n/*\n Indicates an attempt to link with a credential that has already been linked with a\n    different Firebase account\n */\nFIRAuthErrorCodeCredentialAlreadyInUse = 17025,\n\n/*\n Indicates an attempt to set a password that is considered too weak.\n */\nFIRAuthErrorCodeWeakPassword = 17026,\n\n/*\n Indicates the App is not authorized to use Firebase Authentication with the\n    provided API Key.\n */\nFIRAuthErrorCodeAppNotAuthorized = 17028,\n\n/*\n Indicates the OOB code is expired.\n */\nFIRAuthErrorCodeExpiredActionCode = 17029,\n\n/*\n Indicates the OOB code is invalid.\n */\nFIRAuthErrorCodeInvalidActionCode = 17030,\n\n/*\n Indicates that there are invalid parameters in the payload during a \"send password reset\n *  email\" attempt.\n */\nFIRAuthErrorCodeInvalidMessagePayload = 17031,\n\n/*\n Indicates that the sender email is invalid during a \"send password reset email\" attempt.\n */\nFIRAuthErrorCodeInvalidSender = 17032,\n\n/*\n Indicates that the recipient email is invalid.\n */\nFIRAuthErrorCodeInvalidRecipientEmail = 17033,\n\n/*\n Indicates an error occurred while attempting to access the keychain.\n */\nFIRAuthErrorCodeKeychainError = 17995,\n\n/*\n Indicates an internal error occurred.\n */\nFIRAuthErrorCodeInternalError = 17999,\n</code></pre>\n",
+            "body_markdown": "You can find all firebase auth errors codes and explanations under `FIRAuthErrorCode` enum in `FirebaseAuth.framework`\r\n\r\n    \r\n    /*\r\n     Indicates a validation error with the custom token.\r\n     */\r\n    FIRAuthErrorCodeInvalidCustomToken = 17000,\r\n\r\n    /*\r\n     Indicates the service account and the API key belong to different projects.\r\n     */\r\n    FIRAuthErrorCodeCustomTokenMismatch = 17002,\r\n\r\n    /*\r\n     Indicates the IDP token or requestUri is invalid.\r\n     */\r\n    FIRAuthErrorCodeInvalidCredential = 17004,\r\n\r\n    /*\r\n     Indicates the user&#39;s account is disabled on the server.\r\n     */\r\n    FIRAuthErrorCodeUserDisabled = 17005,\r\n\r\n    /*\r\n     Indicates the administrator disabled sign in with the specified identity provider.\r\n     */\r\n    FIRAuthErrorCodeOperationNotAllowed = 17006,\r\n\r\n    /*\r\n     Indicates the email used to attempt a sign up is already in use.\r\n     */\r\n    FIRAuthErrorCodeEmailAlreadyInUse = 17007,\r\n\r\n    /*\r\n     Indicates the email is invalid.\r\n     */\r\n    FIRAuthErrorCodeInvalidEmail = 17008,\r\n\r\n    /*\r\n     Indicates the user attempted sign in with a wrong password.\r\n     */\r\n    FIRAuthErrorCodeWrongPassword = 17009,\r\n\r\n    /*\r\n     Indicates that too many requests were made to a server method.\r\n     */\r\n    FIRAuthErrorCodeTooManyRequests = 17010,\r\n\r\n    /*\r\n     Indicates the user account was not found.\r\n     */\r\n    FIRAuthErrorCodeUserNotFound = 17011,\r\n\r\n    /*\r\n     Indicates account linking is required.\r\n     */\r\n    FIRAuthErrorCodeAccountExistsWithDifferentCredential = 17012,\r\n\r\n    /*\r\n     Same enum as @c FIRAuthErrorCodeAccountExistsWithDifferentCredential ,\r\n        but with incorrect spelling. Only exists for backwards compatiblity.\r\n     */\r\n    FIRAuthErrrorCodeAccountExistsWithDifferentCredential = 17012,\r\n\r\n    /*\r\n     Indicates the user has attemped to change email or password more than 5 minutes after\r\n        signing in.\r\n     */\r\n    FIRAuthErrorCodeRequiresRecentLogin = 17014,\r\n\r\n    /*\r\n     Indicates an attempt to link a provider to which the account is already linked.\r\n     */\r\n    FIRAuthErrorCodeProviderAlreadyLinked = 17015,\r\n\r\n    /*\r\n     Indicates an attempt to unlink a provider that is not linked.\r\n     */\r\n    FIRAuthErrorCodeNoSuchProvider = 17016,\r\n\r\n    /*\r\n     Indicates user&#39;s saved auth credential is invalid, the user needs to sign in again.\r\n     */\r\n    FIRAuthErrorCodeInvalidUserToken = 17017,\r\n\r\n    /*\r\n     Indicates a network error occurred (such as a timeout, interrupted connection, or\r\n        unreachable host). These types of errors are often recoverable with a retry. The @c\r\n        NSUnderlyingError field in the @c NSError.userInfo dictionary will contain the error\r\n        encountered.\r\n     */\r\n    FIRAuthErrorCodeNetworkError = 17020,\r\n\r\n    /*\r\n     Indicates the saved token has expired, for example, the user may have changed account\r\n        password on another device. The user needs to sign in again on the device that made this\r\n        request.\r\n     */\r\n    FIRAuthErrorCodeUserTokenExpired = 17021,\r\n\r\n    /*\r\n     Indicates an invalid API key was supplied in the request.\r\n     */\r\n    FIRAuthErrorCodeInvalidAPIKey = 17023,\r\n\r\n    /*\r\n     Indicates that an attempt was made to reauthenticate with a user which is not the current\r\n        user.\r\n     */\r\n    FIRAuthErrorCodeUserMismatch = 17024,\r\n\r\n    /*\r\n     Indicates an attempt to link with a credential that has already been linked with a\r\n        different Firebase account\r\n     */\r\n    FIRAuthErrorCodeCredentialAlreadyInUse = 17025,\r\n\r\n    /*\r\n     Indicates an attempt to set a password that is considered too weak.\r\n     */\r\n    FIRAuthErrorCodeWeakPassword = 17026,\r\n\r\n    /*\r\n     Indicates the App is not authorized to use Firebase Authentication with the\r\n        provided API Key.\r\n     */\r\n    FIRAuthErrorCodeAppNotAuthorized = 17028,\r\n\r\n    /*\r\n     Indicates the OOB code is expired.\r\n     */\r\n    FIRAuthErrorCodeExpiredActionCode = 17029,\r\n\r\n    /*\r\n     Indicates the OOB code is invalid.\r\n     */\r\n    FIRAuthErrorCodeInvalidActionCode = 17030,\r\n\r\n    /*\r\n     Indicates that there are invalid parameters in the payload during a &quot;send password reset\r\n     *  email&quot; attempt.\r\n     */\r\n    FIRAuthErrorCodeInvalidMessagePayload = 17031,\r\n\r\n    /*\r\n     Indicates that the sender email is invalid during a &quot;send password reset email&quot; attempt.\r\n     */\r\n    FIRAuthErrorCodeInvalidSender = 17032,\r\n\r\n    /*\r\n     Indicates that the recipient email is invalid.\r\n     */\r\n    FIRAuthErrorCodeInvalidRecipientEmail = 17033,\r\n\r\n    /*\r\n     Indicates an error occurred while attempting to access the keychain.\r\n     */\r\n    FIRAuthErrorCodeKeychainError = 17995,\r\n\r\n    /*\r\n     Indicates an internal error occurred.\r\n     */\r\n    FIRAuthErrorCodeInternalError = 17999,\r\n    \r\n    ",
+            "comment_count": 0,
+            "content_license": "CC BY-SA 3.0",
+            "creation_date": 1515254438,
+            "down_vote_count": 0,
+            "is_accepted": false,
+            "last_activity_date": 1515254438,
+            "last_edit_date": null,
+            "link": "https://stackoverflow.com/questions/27420176/list-of-authorisation-errors-with-firebase-login/48129129#48129129",
+            "owner": {
+                "account_id": 7297871,
+                "reputation": 3420,
+                "user_id": 5561910,
+                "user_type": "registered",
+                "profile_image": "https://www.gravatar.com/avatar/23ba7430a53336b3d04d3679b8038033?s=256&d=identicon&r=PG&f=y&so-version=2",
+                "display_name": "Maor",
+                "link": "https://stackoverflow.com/users/5561910/maor",
+                "accept_rate": 75
+            },
+            "question_id": 27420176,
+            "score": 6,
+            "scraped": {
+                "$date": "2024-07-14T15:59:18.393Z"
+            },
+            "title": "List of Authorisation errors with Firebase login",
+            "up_vote_count": 6
+        },
+        {
+            "_id": 40797099,
+            "body": "<p>IOS Auth errors are:</p>\n\n<p>Name:  Hash;  RawValue(code):</p>\n\n<pre><code> - AccountExistsWithDifferentCredential: 10; 17012\n - InvalidEmail: 6; 17008\n - NetworkError: 15; 17020\n - UserDisabled: 3; 17005\n - UserMismatch: 18; 17024\n - UserNotFound: 9; 17011\n - WeakPassword: 20; 17026\n - InternalError: 23; 17999\n - InvalidAPIKey: 17; 17023\n - KeychainError: 22; 17995\n - WrongPassword: 7; 17009\n - NoSuchProvider: 13; 17016\n - TooManyRequests: 8; 17010\n - AppNotAuthorized: 21; 17028\n - InvalidUserToken: 14; 17017\n - UserTokenExpired: 16; 17021\n - EmailAlreadyInUse: 5; 17007\n - InvalidCredential: 2; 17004\n - InvalidCustomToken: 0; 17000\n - CustomTokenMismatch: 1; 17002\n - OperationNotAllowed: 4; 17006\n - RequiresRecentLogin: 11; 17014\n - ProviderAlreadyLinked: 12; 17015\n - CredentialAlreadyInUse: 19; 17025\n</code></pre>\n",
+            "body_markdown": "IOS Auth errors are:\r\n\r\nName:  Hash;  RawValue(code):\r\n\r\n     - AccountExistsWithDifferentCredential: 10; 17012\r\n     - InvalidEmail: 6; 17008\r\n     - NetworkError: 15; 17020\r\n     - UserDisabled: 3; 17005\r\n     - UserMismatch: 18; 17024\r\n     - UserNotFound: 9; 17011\r\n     - WeakPassword: 20; 17026\r\n     - InternalError: 23; 17999\r\n     - InvalidAPIKey: 17; 17023\r\n     - KeychainError: 22; 17995\r\n     - WrongPassword: 7; 17009\r\n     - NoSuchProvider: 13; 17016\r\n     - TooManyRequests: 8; 17010\r\n     - AppNotAuthorized: 21; 17028\r\n     - InvalidUserToken: 14; 17017\r\n     - UserTokenExpired: 16; 17021\r\n     - EmailAlreadyInUse: 5; 17007\r\n     - InvalidCredential: 2; 17004\r\n     - InvalidCustomToken: 0; 17000\r\n     - CustomTokenMismatch: 1; 17002\r\n     - OperationNotAllowed: 4; 17006\r\n     - RequiresRecentLogin: 11; 17014\r\n     - ProviderAlreadyLinked: 12; 17015\r\n     - CredentialAlreadyInUse: 19; 17025",
+            "comment_count": 2,
+            "content_license": "CC BY-SA 3.0",
+            "creation_date": 1480042948,
+            "down_vote_count": 1,
+            "is_accepted": false,
+            "last_activity_date": 1480043294,
+            "last_edit_date": 1480043294,
+            "link": "https://stackoverflow.com/questions/27420176/list-of-authorisation-errors-with-firebase-login/40797099#40797099",
+            "owner": {
+                "account_id": 1665254,
+                "reputation": 766,
+                "user_id": 1532791,
+                "user_type": "registered",
+                "profile_image": "https://www.gravatar.com/avatar/9cf4b754e791722a66d099e1543428b7?s=256&d=identicon&r=PG&f=y&so-version=2",
+                "display_name": "Dewey",
+                "link": "https://stackoverflow.com/users/1532791/dewey",
+                "accept_rate": 62
+            },
+            "question_id": 27420176,
+            "score": 2,
+            "scraped": {
+                "$date": "2024-07-14T15:59:18.395Z"
+            },
+            "title": "List of Authorisation errors with Firebase login",
+            "up_vote_count": 3
+        },
+        {
+            "_id": 27420267,
+            "body": "<p>Here's the full list of error codes from the Firebase website:</p>\n\n<p><a href=\"https://www.firebase.com/docs/web/guide/user-auth.html#section-full-error\" rel=\"nofollow\">https://www.firebase.com/docs/web/guide/user-auth.html#section-full-error</a></p>\n",
+            "body_markdown": "Here&#39;s the full list of error codes from the Firebase website:\r\n\r\nhttps://www.firebase.com/docs/web/guide/user-auth.html#section-full-error",
+            "comment_count": 2,
+            "content_license": "CC BY-SA 3.0",
+            "creation_date": 1418292855,
+            "down_vote_count": 5,
+            "is_accepted": true,
+            "last_activity_date": 1418316538,
+            "last_edit_date": 1418316538,
+            "link": "https://stackoverflow.com/questions/27420176/list-of-authorisation-errors-with-firebase-login/27420267#27420267",
+            "owner": {
+                "account_id": 976178,
+                "reputation": 3305,
+                "user_id": 997293,
+                "user_type": "registered",
+                "profile_image": "https://www.gravatar.com/avatar/bf8cc30d3f6efdd5615f897030cb713e?s=256&d=identicon&r=PG",
+                "display_name": "James Andrews",
+                "link": "https://stackoverflow.com/users/997293/james-andrews",
+                "accept_rate": 59
+            },
+            "question_id": 27420176,
+            "score": -1,
+            "scraped": {
+                "$date": "2024-07-14T15:59:18.396Z"
+            },
+            "title": "List of Authorisation errors with Firebase login",
             "up_vote_count": 4
         }
     ],
     "edits": [
         {
             "_id": {
-                "$oid": "672c85d693a360ee27e536eb"
+                "$oid": "672c8abd93a360ee27e752e8"
             },
-            "Id": "6511722",
-            "PostId": "3144295",
+            "Id": "79545128",
+            "PostId": "27420176",
             "ParentId": "",
             "PostHistoryTypeId": "2",
             "PostTypeId": "",
-            "CreationDate": "2010-06-29T20:03:55.083",
+            "CreationDate": "2014-12-11T10:10:35.247",
             "OwnerUserId": "",
             "Score": 0,
-            "Body": "I am using the low level datastore interface in java. I have an entity that stores a collection of Keys. I would like to query the datastore to get all of the entities in the collection. However, I'd also like to sort them on a created date property. So, I'd like to do something like this:\r\n\r\n    Query query = new Query(EndeavorUpdate.ENDEAVOR_UPDATE_ENTITY_TYPE);\r\n    //getEndeavorUpdateIds() returns a List < Key >\r\n    query.addFilter(\"__key__\", Query.FilterOperator.EQUAL, getEndeavorUpdateIds());\r\n    query.addSort(EndeavorUpdate.CREATED_DATE_PROPERTY);\r\n    PreparedQuery pq = ds.prepare(query);\r\n\r\nHowever, I get an exception saying that \"a collection of values is not allowed\". It does work if I use IN instead of EQUAL but that seems tremendously inefficient. \r\n\r\nIs there a way to do this query efficiently or should I get all the entities from the datastore and do the sorting myself?",
+            "Body": "What I need is a complete list of FirebaseAuthentication codes for all the different login errors and also a list of all those errors. So far I have found some by trial and error but can't take the risk I have missed some.\r\n\r\nI am using the Firebase simple login to log in with email/password, facebook, twitter and also anonymous logins. Obviously with this many login methods there are lots of ways the user can fail to login correctly (incorrect email format, didn't enter a password etc). Currently I am using this code:\r\n\r\n    ... authenticateWithDictionary method\r\n\r\n    completion:^(NSError * error, id<PUser> user) {\r\n        \r\n        if (!error) {\r\n    \r\n            [self loginButtonPressed:Nil];\r\n        }\r\n        else {\r\n\r\n            [UIView alertWithTitle:bErrorTitle withError:error];\r\n        }\r\n\r\nThe only issue with this is I end my getting errors raised which read like this:\r\n\r\n    **(Error Code: EMAIL_TAKEN) The specified email address is already in use.**\r\n\r\nThis is fine to let me know what has gone wrong in testing but once the app goes live I will want individual messages to \r\na) look tidier\r\nb) let the user know why they have got this error\r\n\r\nSo far through trial and error I have figured out the following: \r\n\r\nerror code\r\n\r\n    -5      INVALID EMAIL - empty or incorrect format\r\n    -6      INVALID PASSWORD\r\n    -9      EMAIL TAKEN\r\n\r\nOnce I have a complete list I am going to use a switch statement to get them all being dealt with correctly\r\n\r\nDoes anyone know the comprehensive list of error codes and errors so that I can take them all into account without having to think through all the options which might mean I miss one",
             "LastEditorUserId": "",
             "LastEditorDisplayName": "",
             "LastEditDate": "",
             "LastActivityDate": "",
             "CommentCount": 0,
-            "ContentLicense": "CC BY-SA 2.5",
-            "RevisionGUID": "67910504-e66a-4a0e-9c54-e13478d8448e",
-            "UserId": "195539",
+            "ContentLicense": "CC BY-SA 3.0",
+            "RevisionGUID": "5fd7d39e-ea87-4f03-b6ef-3d36f6d6a06e",
+            "UserId": "2704817",
             "UserDisplayName": "",
             "CloseReasonId": "",
-            "Text": "I am using the low level datastore interface in java. I have an entity that stores a collection of Keys. I would like to query the datastore to get all of the entities in the collection. However, I'd also like to sort them on a created date property. So, I'd like to do something like this:\r\n\r\n    Query query = new Query(EndeavorUpdate.ENDEAVOR_UPDATE_ENTITY_TYPE);\r\n    //getEndeavorUpdateIds() returns a List < Key >\r\n    query.addFilter(\"__key__\", Query.FilterOperator.EQUAL, getEndeavorUpdateIds());\r\n    query.addSort(EndeavorUpdate.CREATED_DATE_PROPERTY);\r\n    PreparedQuery pq = ds.prepare(query);\r\n\r\nHowever, I get an exception saying that \"a collection of values is not allowed\". It does work if I use IN instead of EQUAL but that seems tremendously inefficient. \r\n\r\nIs there a way to do this query efficiently or should I get all the entities from the datastore and do the sorting myself?"
+            "Text": "What I need is a complete list of FirebaseAuthentication codes for all the different login errors and also a list of all those errors. So far I have found some by trial and error but can't take the risk I have missed some.\r\n\r\nI am using the Firebase simple login to log in with email/password, facebook, twitter and also anonymous logins. Obviously with this many login methods there are lots of ways the user can fail to login correctly (incorrect email format, didn't enter a password etc). Currently I am using this code:\r\n\r\n    ... authenticateWithDictionary method\r\n\r\n    completion:^(NSError * error, id<PUser> user) {\r\n        \r\n        if (!error) {\r\n    \r\n            [self loginButtonPressed:Nil];\r\n        }\r\n        else {\r\n\r\n            [UIView alertWithTitle:bErrorTitle withError:error];\r\n        }\r\n\r\nThe only issue with this is I end my getting errors raised which read like this:\r\n\r\n    **(Error Code: EMAIL_TAKEN) The specified email address is already in use.**\r\n\r\nThis is fine to let me know what has gone wrong in testing but once the app goes live I will want individual messages to \r\na) look tidier\r\nb) let the user know why they have got this error\r\n\r\nSo far through trial and error I have figured out the following: \r\n\r\nerror code\r\n\r\n    -5      INVALID EMAIL - empty or incorrect format\r\n    -6      INVALID PASSWORD\r\n    -9      EMAIL TAKEN\r\n\r\nOnce I have a complete list I am going to use a switch statement to get them all being dealt with correctly\r\n\r\nDoes anyone know the comprehensive list of error codes and errors so that I can take them all into account without having to think through all the options which might mean I miss one"
         },
         {
             "_id": {
-                "$oid": "672c85d693a360ee27e536ec"
+                "$oid": "672c8abd93a360ee27e752e9"
             },
-            "Id": "6511723",
-            "PostId": "3144295",
+            "Id": "79545129",
+            "PostId": "27420176",
             "ParentId": "",
             "PostHistoryTypeId": "1",
             "PostTypeId": "",
-            "CreationDate": "2010-06-29T20:03:55.083",
+            "CreationDate": "2014-12-11T10:10:35.247",
             "OwnerUserId": "",
             "Score": 0,
-            "Body": "Querying google datastore by key and sorting by another property",
+            "Body": "List of Authorisation errors with Firebase login",
             "LastEditorUserId": "",
             "LastEditorDisplayName": "",
             "LastEditDate": "",
             "LastActivityDate": "",
             "CommentCount": 0,
-            "ContentLicense": "CC BY-SA 2.5",
-            "RevisionGUID": "67910504-e66a-4a0e-9c54-e13478d8448e",
-            "UserId": "195539",
+            "ContentLicense": "CC BY-SA 3.0",
+            "RevisionGUID": "5fd7d39e-ea87-4f03-b6ef-3d36f6d6a06e",
+            "UserId": "2704817",
             "UserDisplayName": "",
             "CloseReasonId": "",
-            "Text": "Querying google datastore by key and sorting by another property"
+            "Text": "List of Authorisation errors with Firebase login"
         },
         {
             "_id": {
-                "$oid": "672c85d693a360ee27e536ed"
+                "$oid": "672c8abd93a360ee27e752ea"
             },
-            "Id": "6511724",
-            "PostId": "3144295",
+            "Id": "79545130",
+            "PostId": "27420176",
             "ParentId": "",
             "PostHistoryTypeId": "3",
             "PostTypeId": "",
-            "CreationDate": "2010-06-29T20:03:55.083",
+            "CreationDate": "2014-12-11T10:10:35.247",
             "OwnerUserId": "",
             "Score": 0,
-            "Body": "<java><google-app-engine><google-datastore>",
+            "Body": "<ios><objective-c><firebase><firebase-security>",
             "LastEditorUserId": "",
             "LastEditorDisplayName": "",
             "LastEditDate": "",
             "LastActivityDate": "",
             "CommentCount": 0,
-            "ContentLicense": "CC BY-SA 2.5",
-            "RevisionGUID": "67910504-e66a-4a0e-9c54-e13478d8448e",
-            "UserId": "195539",
+            "ContentLicense": "CC BY-SA 3.0",
+            "RevisionGUID": "5fd7d39e-ea87-4f03-b6ef-3d36f6d6a06e",
+            "UserId": "2704817",
             "UserDisplayName": "",
             "CloseReasonId": "",
-            "Text": "<java><google-app-engine><google-datastore>"
-        },
-        {
-            "_id": {
-                "$oid": "672c85da93a360ee27e53bc2"
-            },
-            "Id": "6863164",
-            "PostId": "3144295",
-            "ParentId": "",
-            "PostHistoryTypeId": "6",
-            "PostTypeId": "",
-            "CreationDate": "2010-07-21T21:29:17.687",
-            "OwnerUserId": "",
-            "Score": 0,
-            "Body": "<java><google-app-engine><google-cloud-datastore>",
-            "LastEditorUserId": "",
-            "LastEditorDisplayName": "",
-            "LastEditDate": "",
-            "LastActivityDate": "",
-            "CommentCount": 0,
-            "ContentLicense": "CC BY-SA 2.5",
-            "RevisionGUID": "dbde46ad-924c-4401-bfe0-34adf07eea51",
-            "UserId": "164602",
-            "UserDisplayName": "",
-            "CloseReasonId": "",
-            "Text": "<java><google-app-engine><google-cloud-datastore>"
+            "Text": "<ios><objective-c><firebase><firebase-security>"
         }
     ],
-    "creation_date_formatted": "29.06.2010",
-    "last_activity_date_formatted": "21.07.2010",
-    "last_edit_date_formatted": "21.07.2010"
+    "creation_date_formatted": "11.12.2014",
+    "last_activity_date_formatted": "02.06.2022"
 }
